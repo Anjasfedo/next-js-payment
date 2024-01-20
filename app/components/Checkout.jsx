@@ -26,7 +26,7 @@ const Checkout = () => {
 
     const requestData = await response.json();
 
-    console.log({ requestData });
+    window.snap.pay(requestData.token)
   };
 
   const generatePaymentLink = async () => {
