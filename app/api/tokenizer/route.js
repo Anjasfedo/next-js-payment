@@ -1,6 +1,6 @@
 import Midtrans from "midtrans-client";
 
-import { NextResponse } from "next-server";
+// import { NextResponse } from "next-server";
 
 let snap = new Midtrans.Snap({
   isProduction: false,
@@ -27,7 +27,7 @@ export async function POST(request) {
 
   console.log(token);
 
-  NextResponse.json({
+  return Response.json({
     token
   })
 }
